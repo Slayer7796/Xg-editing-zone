@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Geologica:wght@100;300&family=Poppins:wght@300;400;500&family=Rubik:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsiv.css">
+
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <div class="menu-icun">
+        <img src="/image /Menu-icun.png" alt="/image /Menu-icun.png" onclick="menu()" class="menuimg">
+        <img class="closebtn" onclick="closebtn()" src="/image /Close-256.png" alt="" />
+      </div>
+      <div class="Webname">
+
+        Xg Store
+      </div>
+      <div class="search-icun">
+        <img class="searchbtn" src="/image /search-13-512.png" alt="/image /Search icun.png" onclick="search()">
+        <img class="Sclosebtn" src="/image /Close-256.png" alt="" />
+      </div>
+
+    </nav>
+    <div id="search-hide" class="search-hide">
+      <input type="text" placeholder="type here" class="search-bar">
+
+
+    </div>
+
+    <div class="ul-hide">
+      <ul class="ul">
+        <li> <a href="/preset.html">Alight Motion Preset</a></li>
+        <li><a href="Alight Motion VFX Pack">Alight Motion VFX Pack</a></li>
+        <li><a href="/Twixtor.html">Anime Twixtor Clips</a></li>
+        <li><a href="Anime raw clips">Anime raw clips</a></li>
+        <li><a href="/Tutorial.html">Video editing tutorial</a></li>
+        <li><a href="Home">Home</a></li>
+        <li><a href="About">About</a></li>
+        <li><a href="Contact">Contact</a></li>
+
+
+      </ul>
+    </div>
+  </header>
+  <div class="Container"></div>
+  <div class="DetailsContainer"></div>
+  <footer id="footer">
+    <div class="part1">
+
+
+      <div class="footer-section1">
+        <h3>
+          Category
+        </h3>
+        <div class="category">
+          <img src="/image /Arrow.png" alt="Arrow.png">
+          <a href="/preset.html">Am Preset</a>
+        </div>
+        <div class="category">
+          <img src="/image /Arrow.png" alt="Arrow.png">
+          <a href="">Am vfx pack</a><br>
+        </div>
+
+      </div>
+      <div class="footer-section2">
+        <div class="category">
+          <img src="/image /Arrow.png" alt="Arrow.png">
+          <a href="/Twixtor.html">Twixtor clips</a>
+        </div>
+        <div class="category">
+          <img src="/image /Arrow.png" alt="Arrow.png">
+          <a href="/Tutorial.html">Editing tutorial</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-section4">
+      <div class="linkp1">
+
+        <h3>
+          Social link
+        </h3>
+
+        <div class="instagram">
+          <img src="/image /insta.png" alt="instalogo">
+          <a href="instagram.com">instagram</a>
+        </div>
+        <div class="chanel">
+          <img src="/image /YouTube.png" alt="youtube log" class="logo-size">
+          <a href="https://youtube.com/@slayer1596">Slayer</a>
+        </div>
+        <div class="chanel">
+          <img src="/image /YouTube.png" alt="youtube log" class="logo-size">
+          <a href="https://youtube.com/@rxeditz7678">Rx Editz76</a>
+        </div>
+      </div>
+      <div class="linkp2">
+
+        <div class="chanel2">
+          <img src="/image /YouTube.png" alt="youtube log" class="logo-size">
+          <a href="https://youtube.com/@xreditiz7641">Xr Editz76</a>
+
+        </div>
+
+        <div class="gmail">
+          <img src="/image /Gmail.png" alt="gmail log" class="logo-size">
+          <a href="">gmail</a>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+  </footer>
+  <br>
+  <p style="text-align: center; background-color: black ; color: white ; padding: 10px 0px">© Copyright 2023, All Rights Reserved | </p>
+  <script type="module" src="main.js"></script>
+  <script>
+    var ulhide = document.querySelector(".ul-hide");
+    var searchHide = document.querySelector(".search-hide");
+    var menuicun = document.querySelector(".menuimg");
+    var ul = document.querySelector('.ul-hide');
+    var closbtn = document.querySelector(".closebtn")
+    var sclosbtn = document.querySelector(".Sclosebtn");
+    var searchbtn = document.querySelector(".searchbtn");
+
+    sclosbtn.style.display = "none"
+
+    function search() {
+      searchbtn.classList.add("hide");
+      sclosbtn.style.display = "block";
+
+      if (searchHide.classList.contains("search-hide")) {
+        searchHide.classList.remove("search-hide");
+
+      } else {
+        searchHide.classList.add("search-hide");
+      }
+    }
+
+    sclosbtn.addEventListener('click', function() {
+      sclosbtn.classList.toggle("hide");
+      searchbtn.classList.remove("hide");
+      sclosbtn.style.display = "none";
+      searchHide.classList.add("search-hide")
+
+    })
+
+    function menu() {
+      menuicun.classList.add("hide");
+      ul.classList.toggle('ul-show');
+      closbtn.style.display = "block";
+    }
+
+    function closebtn() {
+      closbtn.classList.toggle("hide");
+      menuicun.classList.remove("hide");
+      ul.classList.toggle('ul-show');
+      closbtn.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
